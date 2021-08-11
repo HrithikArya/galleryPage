@@ -177,6 +177,12 @@ p {
 /* menu items style  */
 :root {
   --grey-color: #7f8c8d;
+  --primary-color: hsl(196, 78%, 61%);
+  --secondary-color: hsl(217, 15%, 83%);
+  --success-color: hsl(165, 58%, 55%);
+  --info-color: hsl(214, 79%, 65%);
+  --warning-color: hsl(43, 100%, 66%);
+  --danger-color: hsl(354, 81%, 63%);
 }
 
 
@@ -275,8 +281,28 @@ a {
   background-size: 100%;
 }
 
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
 
-
+.items-start {
+  align-items: flex-start;
+}
+.leading-none {
+  line-height: 1;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.space-y-4 > * + * {
+  margin-top: 1rem !important;
+}
 
 /* grid system  */
 .menu-inner {
