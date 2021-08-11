@@ -184,6 +184,8 @@ p {
   --warning-color: hsl(43, 100%, 66%);
   --danger-color: hsl(354, 81%, 63%);
   --primary-color-darker: hsl(196, 68%, 54%);
+  --danger-color-lighter: hsl(354, 81%, 83%);
+
 
 }
 
@@ -277,6 +279,9 @@ a {
 }
 .menu-hover-fill li:nth-child(5) {
   --menu-link-active-color: var(--danger-color);
+}
+.menu-hover-fill li:nth-child(6) {
+  --menu-link-active-color: var(--danger-color-lighter);
 }
 .menu-hover-fill li:hover::before {
   left: calc(100% + 1rem);
