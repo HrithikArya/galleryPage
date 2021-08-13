@@ -1,27 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
-html,
-body {
-  width: 100%;
+
+* {
   margin: 0;
   padding: 0;
-  font-family: "Arvo", serif;
 }
-
+#quiz-masters {
+  font-family: "Arvo", serif;
+  background: #011627;
+  padding: 1% 0 7%;
+}
 
 h1 {
   font-size: 2.5rem;
   text-align: left;
   font-weight: 400;
-  color: black;
+  color: #FDFFFC;
   margin: 3rem 0 0 0;
 }
 
 h1 span {
   font-family: "Satisfy", cursive;
-  font-size: 4rem;
-  color: #f73c57;
+  font-size: 3.5rem;
+  color: #FF9F1C;
 }
 
 p,
@@ -35,13 +37,16 @@ q {
 }
 
 p {
-  color: #f73c57;
+  color: #FDFFFC;
 }
-
-.customer-revs {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto 0 auto;
+.rectangle {
+  width: 40%;
+  height: 100%;
+  background: #FDFFFC;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /* slideshow container */
@@ -61,10 +66,36 @@ p {
 
 .mySlidesContainer {
   min-height: 5rem;
-  padding: 3.5rem 2.5rem 2rem 3.5rem;
-  background: #d3d3d3;
+  padding: 8rem 2.5rem 2rem 3.5rem;
+  background: #FDFFFC;
+  position: relative;
+}
+.mySlidesContainer img{
+  position: absolute;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  border: 5px solid #FDFFFC;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: right;
+  margin-top: 1rem;
 }
 
+@media (max-width:1000px){
+  .rectangle{
+    width: 30%;
+  }
+  .mySlidesContainer img{
+    height: 12rem;
+    width: 12rem;
+  }
+  .mySlidesContainer q{
+    font-size: 1rem;
+  }
+}
 /* next & previous buttons */
 .prev,
 .next {
@@ -74,7 +105,7 @@ p {
   width: auto;
   margin-top: -1.875rem;
   padding: 1rem;
-  color: #232323;
+  color: #FF9F1C;
   font-weight: bold;
   font-size: 3rem;
   border-radius: 3px;
@@ -90,11 +121,12 @@ p {
 }
 
 /* on hover, add a black bg color with a little bit see-through */
-.prev:hover,
+.prev:hover{
+  color: #FDFFFC;
+  text-decoration: none;
+}
 .next:hover {
-  background-color: #000; /* fallback color */
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #f6eac1;
+  color: #011627;
   text-decoration: none;
 }
 
@@ -109,7 +141,7 @@ p {
   height: 0.9375rem;
   width: 0.9375rem;
   margin: 0 2px;
-  background-color: #f73c57;
+  background-color: #FDFFFC;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.4s ease;
@@ -117,40 +149,34 @@ p {
 
 /* add bg color to the active dot/circle */
 .active {
-  background-color: #232323;
-}
-
-
-.mySlidesContainer img {
-  display: block;
-  margin: auto;
-  margin-bottom: 30px;
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
+  background-color: #FF9F1C;
 }
 
 @media (max-width:800px) {
-  .mySlidesContainer img {
-    width: 200px;
-    height: 200px;
+
+  .slideshow-container h1 {
+    margin-left: 2rem;
+  }
+  .slideshow-container {
+    max-width: 100%;
   }
   .mySlides {
-    padding: 0;
-  }
-  .mySlidesContainer {
     padding: 2rem;
   }
-  .prev, .next {
-    padding: 0.5rem;
+  .mySlidesContainer {
+    padding: 02rem;
+    padding-top: 8rem;
   }
-  
+  .next, .prev {
+    padding: 0rem;
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
 }
 
+@media (max-width:700px) {
+  .slideshow-container h1, h1 span {
+    font-size: 2.2rem;
 
-@media (max-width:550px) {
-  .mySlidesContainer img {
-    width: 120px;
-    height: 120px;
   }
 }
