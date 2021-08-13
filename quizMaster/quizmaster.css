@@ -138,6 +138,12 @@ p {
   .mySlides {
     padding: 0;
   }
+  .mySlidesContainer {
+    padding: 2rem;
+  }
+  .prev, .next {
+    padding: 0.5rem;
+  }
   
 }
 
