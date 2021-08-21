@@ -19,14 +19,14 @@ body {
   background: #333;
 }
 
-body .container {
+body .img-container {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80em;
+  width: 140em;
   height: 80em;
 }
-body .container [class*=item] {
+body .img-container [class*=item] {
   width: 33%;
   height: 33%;
   border: 1px solid transparent;
@@ -34,50 +34,50 @@ body .container [class*=item] {
   transition: all 0.5s ease-in-out;
   z-index: 0;
 }
-body .container [class*=item]:hover {
+body .img-container [class*=item]:hover {
   border: 1px solid white;
   z-index: 1;
 }
-body .container [class*=item]:nth-of-type(1) {
+body .img-container [class*=item]:nth-of-type(1) {
   top: 0;                   
   left: 0;
 }
-body .container [class*=item]:nth-of-type(2) {
+body .img-container [class*=item]:nth-of-type(2) {
   top: 0;
   left: 33%;
 }
-body .container [class*=item]:nth-of-type(3) {
+body .img-container [class*=item]:nth-of-type(3) {
   top: 0;
   left: 66%;
 }
-body .container [class*=item]:nth-of-type(4) {
+body .img-container [class*=item]:nth-of-type(4) {
   top: 33%;
   left: 0;
 }
-body .container [class*=item]:nth-of-type(5) {
+body .img-container [class*=item]:nth-of-type(5) {
   top: 33%;
   left: 33%;
 }
-body .container [class*=item]:nth-of-type(6) {
+body .img-container [class*=item]:nth-of-type(6) {
   top: 33%;
   left: 66%;
 }
-body .container [class*=item]:nth-of-type(7) {
+body .img-container [class*=item]:nth-of-type(7) {
   top: 66%;
   left: 0;
 }
-body .container [class*=item]:nth-of-type(8) {
+body .img-container [class*=item]:nth-of-type(8) {
   top: 66%;
   left: 33%;
 }
-body .container [class*=item]:nth-of-type(9) {
+body .img-container [class*=item]:nth-of-type(9) {
   top: 66%;
   left: 66%;
 }
-body .container input {
+body .img-container input {
   display: none;
 }
-body .container input:checked + [class*=item] {
+body .img-container input:checked + [class*=item] {
   top: 0;
   left: 0;
   width: 100%;
